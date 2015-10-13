@@ -1,22 +1,20 @@
-
 package cardgame;
 
-/**
- *
- * 
- */
-public class CardGame {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+/**
+ * @param args the command line arguments
+ */
+public class CardGame { //extends JPanel {
+
     public static void main(String[] args) {
-      Deck d = new Deck();
-      d.fill();
-        
-        
-        
-        
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("welcome to blackjack");
+        System.out.println("how many people want to play (5 max)");
+        int playerCount = keyboard.nextInt();
+        if (playerCount > 5) { 
+        System.out.println("too many players");
     }
-    
 }
+}
+
