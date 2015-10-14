@@ -3,15 +3,16 @@ package cardgame;
 import java.util.Random;
 
 public class Deck {
-    String[] deck = new String[52];
-   
+    Cards[] deck = new Cards[52];
+
     public void fill() {
-int count = 0;
+
 //Suit fill sort
-for (int i = 0; i < 4; i ++){
+int count = 0;   
+for (int suit = 0; suit < 4; suit ++){
 //Rank fill sort
-for (int j = 0; j < 13; j++){
-    deck(count) = new Card(i,j);
+for (int rank = 0; rank < 13; rank++){
+    deck[count] = new Card(suit,rank);
     count++;
     
 }    
@@ -19,13 +20,21 @@ for (int j = 0; j < 13; j++){
 
     
     }
+    public void printDeck(){
+        for (int i=0;i<52;i++){
+            deck[i].print();
+        }
+    }
 
     public void shuffle() {
         int RandomizeSlot = 53;
         while (RandomizeSlot > 1) {
             Random rand = new Random();
-            rand.nextInt(53);
-
+            int x =rand.nextInt(53);
+            
+           deck[x] = new Card()
+        RandomizeSlot = RandomizeSlot - 1;
+                  
         }
 
         System.out.println("Shuffling......");
@@ -82,5 +91,11 @@ for (int j = 0; j < 13; j++){
 //        Deck[51] = ("");
 //        Deck[52] = ("");
     }
-
+public static void main(String[] args){
+    Deck d = new Deck();
+    d.fill();
+    d.printDeck();
+    
+}
+        
 }
