@@ -3,7 +3,7 @@ package cardgame;
 import java.util.Random;
 
 public class Deck {
-    Cards[] deck = new Cards[52];
+    Card[] deck = new Card[52];
 
     public void fill() {
 
@@ -32,7 +32,7 @@ for (int rank = 0; rank < 13; rank++){
             Random rand = new Random();
             int x =rand.nextInt(53);
             
-           deck[x] = new Card()
+   //        deck[x] = new Card();
         RandomizeSlot = RandomizeSlot - 1;
                   
         }

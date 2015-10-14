@@ -12,9 +12,22 @@ public class CardGame { //extends JPanel {
         System.out.println("welcome to blackjack");
         System.out.println("how many people want to play (5 max)");
         int playerCount = keyboard.nextInt();
-        if (playerCount > 5) { 
-        System.out.println("too many players");
+        int run = 0;
+        while (run == 0){
+        if (playerCount <= 5 && playerCount >=1) { 
+        System.out.println(playerCount+ " Players will be entered in this game");
+        break;
+                }
+        else{
+            System.out.println("too many players");
+            
+            
+            }
+        
+        
+        }
     }
 }
-}
+
+
 
