@@ -79,7 +79,7 @@ public static void main(String[] args){
    d.shuffle();
   
    
-    //d.printDeck();
+    d.printDeck();
     
 }
         
